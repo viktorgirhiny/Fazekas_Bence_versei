@@ -1,0 +1,168 @@
+html
+{
+    scroll-behavior: smooth;
+    background-color: #111;
+}
+
+body
+{
+    background-color: #111;
+    color: #ddd;
+}
+
+.testimony-section
+{
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.testimony-section h2
+{
+    font-size: 35px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.testimony-section .group
+{
+    display: flex;
+    align-items: center;
+    gap: 5vw;
+}
+
+.testimony-section .group .person-details
+{
+    text-align: center;
+    width: 30%;
+    flex: 2;
+}
+
+.testimony-section .group .person-details #name
+{
+    font-size: 2.5vw;
+}
+
+.testimony-section .group .person-details #moto
+{
+    font-size: 1.5vw;
+}
+
+.testimony-section .group .text
+{
+    position: relative;
+    top: -2vw;
+    font-size: 2.3vw;
+    line-height: 1;
+    width: 70%;
+}
+
+.testimony-section .group .person-details img
+{
+    aspect-ratio: 1/1;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    width: 20vw;
+    height: auto;
+}
+
+.testimony-section .group .person-details p
+{
+    font-weight: 600;
+}
+
+.testimony-section .group .person-details p:last-child
+{
+    font-weight: normal;
+}
+
+
+.footer-content
+{
+    background-color: #aaa;
+    color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+    font-size: 1.5vw;
+    height: 3.5vw;
+}
+
+@media screen and (max-width: 768px) 
+{
+    .testimony-section
+    {
+     width: 100%;
+     margin: 0;
+     padding: 0;
+     gap: 0;
+    }
+
+    .testimony-section h2
+    {
+        font-size: 6vw; 
+    }
+
+    .testimony-section .group
+    {
+        margin-top: 3vw;
+        height: 40vw;
+    }
+    
+    .testimony-section .group .person-details #name
+    {
+        font-size: 4vw;
+        margin: 0;
+        padding: 0;
+    }
+
+    .testimony-section .group .person-details #moto
+    {
+        font-size: 2vw;
+    }
+
+    .testimony-section .group .text
+    {
+        position: relative;
+        top: -2vw;
+        font-size: 2.7vw;
+        width: 60%;
+        margin: 0;
+    }
+
+    .footer-content
+    {
+        font-size: 2.6vw;
+        height: 4vw;
+        position: relative;
+        top: 100vh;
+    }
+}
+
+@media screen and (max-width: 425px) 
+{
+    .testimony-section .group
+    {
+        height: auto
+    }
+
+    .testimony-section
+   {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+   }
+
+   .testimony-section .group .person-details #moto
+   {
+    font-size: 2.5vw;
+   }
+
+   .testimony-section .group .text
+   {
+    font-size: 3.5vw;
+    position:initial;
+   }
+}
