@@ -81,6 +81,11 @@ body
     font-weight: normal;
 }
 
+#szoveg
+{
+    font-size: 2vw;
+}
+
 
 .footer-content
 {
@@ -116,6 +121,7 @@ body
     padding-left: 2%;
     overflow: hidden;
     margin: auto auto;
+    justify-content: space-between;
   }
   
   .filterDiv {
@@ -126,10 +132,12 @@ body
     min-width: 10vw;
     padding-left:1vw ;
     padding-right:1vw ;
-    line-height: 10vw;
+    line-height: 8vw;
     font-size: 1.6vw;
     text-align: center;
     margin: 2px;
+    height: auto;
+    cursor: pointer;
     display: none; /* Hidden by default */
   }
   
@@ -200,6 +208,7 @@ body
      margin: 0;
      padding: 0;
      gap: 0;
+     margin-bottom: 3vw;
     }
 
     .testimony-section h2
@@ -234,11 +243,6 @@ body
         margin: 0;
     }
 
-    .container
-    {
-        display: flex;
-    }
-
     .footer-content
     {
         font-size: 2.6vw;
@@ -267,7 +271,23 @@ body
 
    .testimony-section .group .text
    {
-    font-size: 3.5vw;
+    font-size: 3.3vw;
     position:initial;
+    margin-bottom: 5vw;
+   }
+
+   .btn
+   {
+    font-size: 4vw;
+   }
+
+   .filterDiv
+   {
+    font-size: 2.5vw;
+   }
+   
+   #szoveg
+   {
+    font-size: 3vw;
    }
 }
