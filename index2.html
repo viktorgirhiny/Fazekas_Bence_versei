@@ -10,24 +10,46 @@
         integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
         crossorigin="anonymous"></script>
 
-        <style>
-            @media screen and (max-width: 768px) 
-            {
-                .img-fluid
-                {
-                    min-width: 30vw;
-                }
-            }
-        </style>
+<style>
+
+    :root
+    {
+        --text-white:#fff;
+        --bg-dark:#212529;
+    }
+    @media screen and (max-width: 768px) 
+    {
+        .img-fluid
+        {
+            min-width: 30vw;
+        }
+    }
+
+    .my-custom-btn:hover 
+    {
+        outline: 2px solid var(--text-white); /* Fekete keret */
+        outline-offset: 2px;
+        cursor: pointer;
+        color: var(--text-white) !important;
+        background-color: var(--bg-dark) !important;
+        font-weight: 600;
+        transition: all 0.05s ease;
+
+        &.my-custom-btn a
+        {
+            color: var(--text-white) !important;
+        }
+    }
+</style>
 
     <title>Document</title>
 
 </head>
 
-<body style="margin-top: 30px;" class="bg-dark">
+<body style="margin-top: 30px; margin-bottom: 40px;" class="bg-dark">
 
     <h1 class="text-center text-white my-3">Verses csokor</h1>
-    <section>
+    <section>  <!-- bevezető -->
         <div class="container text-white" id="testimony">
             <div class="row">
                 <div class="col-12 col-md-6 text-center">
@@ -68,12 +90,30 @@
                     </nav>
                     <div class="tab-content mt-3">
                         <div class="tab-pane fade show active" id="nav-halal" role="tabpanel" aria-labelledby="nav-halal-tab">
-                            <ul>
-                                <li><a href="#" class="text-decoration-none">Vers a halálról 1</a></li>
-                                <li><a href="#" class="text-decoration-none">Vers a halálról 2</a></li>
-                                <li><a href="#" class="text-decoration-none">Vers a halálról 3</a></li>
-                            </ul>
+                            <div class="row gap-4 w-100 d-flex justify-content-center flex-column flex-sm-row">
+                                <!-- első collapse gomb -->
+                                <div class="col-12 col-sm-4 col-md-3 col-lg-2 btn bg-light my-custom-btn text-center">
+                                    <a href="vers1" class="text-decoration-none text-dark" target="_blank">Csak meghalni volna jó</a>
+                                </div>
+                                <div class="col-12 col-sm-4 col-md-3 col-lg-2 btn bg-light my-custom-btn text-center">
+                                    Mennyből az angyal
+                                </div>
+                                <div class="col-12 col-sm-4 col-md-3 col-lg-2 btn bg-light my-custom-btn text-center">
+                                    vers3
+                                </div>
+                                <div class="col-12 col-sm-4 col-md-3 col-lg-2 btn bg-light my-custom-btn text-center">
+                                    vers4
+                                </div>
+                            </div>
+
+                            <!-- elso gomb tartalma -->
+                            <div class="collapse ml-5" style="width: 300px; position: relative; top: 1vw; left: 9vw;"  id="poem1">
+                                <div class="card card-body w-20 ml-5">
+                                    Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                                </div>
+                            </div>  
                         </div>
+
                         <div class="tab-pane fade" id="nav-magany" role="tabpanel" aria-labelledby="nav-magany-tab">
                             <ul>
                                 <li><a href="#" class="text-decoration-none">Vers a magányról 1</a></li>
@@ -112,5 +152,8 @@
         </div>
     </section>
 </body>
-
+<script>
+    const collapseElementList = document.querySelectorAll('.collapse')
+    const collapseList = [...collapseElementList].map(collapseEl => new bootstrap.Collapse(collapseEl))
+</script>
 </html>
