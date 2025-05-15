@@ -25,15 +25,21 @@
         }
     }
 
-    .my-custom-btn:hover 
+    .my-custom-btn 
     {
-        outline: 2px solid var(--text-white); /* Fekete keret */
+        transition: all 0.3s ease-in-out;
+        padding: 8px;
+        border-radius: 12px;
+        box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .my-custom-btn:hover {
+        outline: 2px solid var(--text-white);
         outline-offset: 2px;
         cursor: pointer;
-        color: var(--text-white) !important;
         background-color: var(--bg-dark) !important;
+        color: var(--text-white) !important;
         font-weight: 600;
-        transition: all 0.05s ease;
 
         &.my-custom-btn a
         {
@@ -71,7 +77,7 @@
 
 
     <section>
-        <div class="container mt-3">
+        <div class="container-fluid mt-3">
             <!-- menü -->
             <nav>
                 <div class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
@@ -90,7 +96,7 @@
                     </nav>
                     <div class="tab-content mt-3">
                         <div class="tab-pane fade show active" id="nav-halal" role="tabpanel" aria-labelledby="nav-halal-tab">
-                            <div class="row gap-4 w-100 d-flex justify-content-center flex-column flex-sm-row">
+                            <div class="row gap-4 d-flex justify-content-center flex-column flex-sm-row mx-0">
                                 <!-- első collapse gomb -->
                                 <div class="col-12 col-sm-4 col-md-3 col-lg-2 btn bg-light my-custom-btn text-center">
                                     <a href="vers1" class="text-decoration-none text-dark" target="_blank">Csak meghalni volna jó</a>
